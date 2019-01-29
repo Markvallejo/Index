@@ -12,11 +12,22 @@
         img {
             max-width: 100%;
             vertical-align: top;
+            /* display: none; */
+        }
+
+        img#responsive {
+                display: none;
+            }
+        @media screen and (max-width: 768px){
+            img#responsive {
+                display: block;
+            }
+
         }
     </style>
 </head>
 <body>
-
+    <img src="programacion.jpeg" alt="" id="responsive">
     <img src="final.jpg" alt="">
     <img src="nica.jpg" alt="">
     <img src="manos.jpg" alt="">
