@@ -106,13 +106,13 @@ figure {
 
  .principal-image {
      object-fit: cover;
-     display: block;
-     padding: 20px;
-     width: 99px;
-     border: 2px solid pink;
-     height: 50px;
-     /* justify-content: space-between;
-     align-items: center; */
+     display: inherit;
+     padding: inherit;
+     width: 500px;
+     /* border: 2px solid pink; */
+     height: inherit;
+     justify-content: space-between;
+     align-items: center;
      
  } 
 
