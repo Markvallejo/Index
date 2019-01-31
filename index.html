@@ -1,35 +1,124 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="es">
-<head>  
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Curso Github</title>
-    <style>
-        body{
-            margin: 0;
-            border: 5px solid aquamarine;
-        }
-        img {
-            max-width: 100%;
-            vertical-align: top;
-            /* display: none; */
-        }
-
-        img#responsive {
-                display: none;
-            }
-        @media screen and (max-width: 768px){
-            img#responsive {
-                display: block;
-            }
-
-        }
-    </style>
+<head>
+    <meta charset="UTF-8" />
+    <title>Portafolio</title>
+    <link rel="icon" type="images/png" href="logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/Estilo.css">
 </head>
 <body>
+    <header class="cabecera">
+        <div class="container">
+                <figure class="logotip">
+                        <img src="logo.png" alt="Logo de https://marcosvallejo.com" width="300">
+                </figure>
+                <nav class="menu">
+                    <ol>
+                         <li>
+                            <a class="portafolio" href="#portafolio" ><h4>Portafolio</h4></a>
+                        </li>
+                        <li>
+                            <a class="experiencia" href="#experiencia"><h4>Experiencia</h4></a>
+                        </li>
+                        <li>
+                            <a class="contacto" href="#contacto"><h4>Contacto</h4></a>
+                        </li>
+                    </ol>
+                </nav>
+        </div> 
+    </header>
 
-    <img src="programacion.jpeg" alt="" id="responsive">
-    <img src="lenguajes.jpeg" alt="">
+    <section class="principal">
+        <div class="container">
+            <h1>Hola! Soy <strong>Marcos Vallejo</strong> <br> Ingeniero en <strong>Sistemas</strong>  <br> y <strong>Programador</strong> </h1>
+              <figure class="principal-image">
+                <img src="inicio.png" width="500" height="300">
+            </figure>   
+        </div>        
+    </section>
+
+    <section id="portafolio" class="portfolio">
+        <div class="container">
+                <h2>Portafolio (Proyectos Realizados)</h2>
+                <article class="proyect"> 
+                    <div class="proyect-details">
+        
+                        <h3 class="proyect-title">Coneccion ASP</h3>
+                        <h6 class="proyect-work">Desarrollo Web</h6>
+                        <p class="proyect-fecha"><small><strong>Fecha:</strong>20/11/2014</small></p>
+                        <p class="proyect-link" ><small><strong>Puedes verlo en:</strong></small> <a  class="index" href="https://www.desarrollowebonline.com" target="-bank"> <small> www.conexion.com/asp</small> </a> </p>  
+                        <p class="proyect-description">Conexion fue un proyecto desarrollado en el año 2014 por estudantes de Ingenieria en sistemas de la UNAN Leon, 
+                            el cual tuvo como fin brindar la oportunidad a estudiantes egresados de conectarse con empresas que requirieran 
+                            sus servicios profesionales</p>
+                    </div>
+                    <figure class="proyect-imageContainer">
+                        <img class="proyect-image" src="segunda.jpg" width="450" alt="">
+                    </figure>
+                </article>
+        </div>
+        <div class="container">
+                <h2 id="experiencia" class="experientia-title">Mas sobre mi experiencia</h2>
+        </div>
+    </section>
+
+    
+    <section class="experientia">
+
+        <div class="container">
+                <article class="work">
+                        <figure class="work-imageContainer">
+                            <img class="work.image" src="mundo.jpg" width="300"> 
+                        </figure>
+                        <div class="work-detail">
+                            <h3 class="work-place">Escuelas de Oficio 2016</h3>
+                            <p class="work-description" >Facilitador en cursos de Ofimatica y Sistemas Operativos</p>
+                            <a class="work-link" href="https://www.youtube.com/watch?v=7oQ8sNSYXmQ" target="-bank">Ver acciones</a>
+                        </div>
+                       
+                    </article>
+            
+                    <article class="work">
+                        <figure class="work-imageContainer">
+                            <img class="work.image" src="mundo.jpg" width="300">
+                        </figure>
+                        <div class="work-detail">
+                            <h3 class="work-place">Escuelas de Oficio 2016</h3>
+                            <p class="work-description" >Facilitador en cursos de Ofimatica y Sistemas Operativos</p>
+                            <a class="work-link" href="https://www.youtube.com/watch?v=7oQ8sNSYXmQ" target="-bank">Ver acciones</a>
+                        </div>
+                       
+                    </article>
+
+        </div>
+        
+    </section>
+    
+    <section id="contacto" class="contact"> 
+        <div class="container">
+            <form action="https://www.gmail.com" class="form-email">
+                    <h3>Escribemos o sigueme en las redes sociales</h3>
+                    <input type="text" placeholder="Correo Electronico">
+                    <button>Enviar</button>
+            </form>
+             <div class="social">
+                    <a href="https://twitter.com/marcosvallejo" class="social-red twitter" target="-bank"></a>
+                    <a href="https://facebook.com/marcos.vallejo.142" class="social-red facebook" target="-bank"></a>
+                    <a href="https://instagram.com/marcosvallejo" class="social-red instagram" target="-bank"></a>
+                    <a href="https://github.com/marcosvallejo" class="social-red github" target="-bank"></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pie-pagina">
+        <div class="container">
+            <div>
+                 <p>Curso de Desarrollo Web Online <img src="final.jpg" alt="HTML" width="80"></p> 
+            </div>
+            <div>
+                  <P>Designed by <a href="https://markvallejo7@gmail.com" target="-bank">@marcosvallejo</a> </P>
+            </div>
+        </div>     
+    </footer>
 </body>
-</html> 
+</html>
