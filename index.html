@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <title>Portafolio</title>
     <link rel="icon" type="images/png" href="logo.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro">
     <link rel="stylesheet" href="CSS/Estilo.css">
 </head>
+
 <body>
+
+    <i class="icon-menu burger-menu" id="burger-menu"></i>
+
     <header class="cabecera">
         <div class="container">
                 <figure class="logotip">
@@ -56,7 +60,7 @@
                         <img class="proyect-image" src="segunda.jpg" width="450" alt="">
                     </figure>
                 </article>
-        </div>
+        </div> 
         <div class="container">
                 <h2 id="experiencia" class="experientia-title">Mas sobre mi experiencia</h2>
         </div>
@@ -90,13 +94,38 @@
                        
                     </article>
 
+                    <article class="work">
+                        <figure class="work-imageContainer">
+                            <video src="Video/musica.m4v" controls class="video-html" width="640"></video>
+                        </figure>
+                        <!-- <div class="work-detail">
+                            <h3 class="work-place">Escuelas de Oficio 2016</h3>
+                            <p class="work-description" >Facilitador en cursos de Ofimatica y Sistemas Operativos</p>
+                            <a class="work-link" href="https://www.youtube.com/watch?v=7oQ8sNSYXmQ" target="-bank">Ver acciones</a>
+                        </div> -->
+                       
+                    </article>
+
+                    <article class="work">
+                        <figure class="work-imageContainer">
+                            <iframe class="video-youtube" width="560" height="315" src="https://www.youtube.com/embed/24gNhTcy6pw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </figure>
+                        <!-- <div class="work-detail">
+                            <h3 class="work-place">Escuelas de Oficio 2016</h3>
+                            <p class="work-description" >Facilitador en cursos de Ofimatica y Sistemas Operativos</p>
+                            <a class="work-link" href="https://www.youtube.com/watch?v=7oQ8sNSYXmQ" target="-bank">Ver acciones</a>
+                        </div> -->
+                       
+                    </article>
+
+
         </div>
         
-    </section>
+    </section> 
     
     <section id="contacto" class="contact"> 
         <div class="container">
-            <form action="https://www.gmail.com" class="form-email">
+            <form action="https://markvallejo7@gmail.com" target="bank" class="form-email">
                     <h3>Escribemos o sigueme en las redes sociales</h3>
                     <input type="text" placeholder="Correo Electronico">
                     <button>Enviar</button>
@@ -113,12 +142,44 @@
     <footer class="pie-pagina">
         <div class="container">
             <div>
-                 <p>Curso de Desarrollo Web Online <img src="final.jpg" alt="HTML" width="80"></p> 
+                 <p>Curso de Desarrollo Web Online 💻 </p> 
             </div>
             <div>
-                  <P>Designed by <a href="https://markvallejo7@gmail.com" target="-bank">@marcosvallejo</a> </P>
+                <img src="final.jpg" alt="HTML" width="80">
+            </div>
+            <div>
+                  <P>Designed by <a href="https://markvallejo7@gmail.com" target="bank">@marcosvallejo</a> 🤘🏻 </P>
             </div>
         </div>     
-    </footer>
+    </footer> 
+
+    <script>
+
+      //  const ipad = window.matchMedia('screen and (max-width: 1000px)')
+        const menu = document.querySelector('.menu');
+        const burgerButton = document.querySelector('#burger-menu');
+
+        // ipad.addListener(validacion)
+
+        // function validacion(evento){
+        //     if(evento.matches){
+        //         burgerButton.addEventListener('click', mostrar)
+        //     }
+        //     else {
+        //         burgerButton.removeEventListener('click', mostrar)
+        //     }
+        // }
+       
+        burgerButton.addEventListener('click', mostrar)
+        function mostrar () {
+
+            if(menu.classList.contains('active')){
+                menu.classList.remove('active');
+            }
+            else {
+                menu.classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>

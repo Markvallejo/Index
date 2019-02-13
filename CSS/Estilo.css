@@ -1,4 +1,36 @@
-
+ /* estilo para el munu pricipal */
+ @font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?v8aa9l');
+    src:  url('../fonts/icomoon.eot?v8aa9l#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?v8aa9l') format('truetype'),
+      url('../fonts/icomoon.woff?v8aa9l') format('woff'),
+      url('../fonts/icomoon.svg?v8aa9l#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak-as: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-menu:before {
+    content: "\e900";
+  }
+  
+ /* estilo para todo el sitio web */
+  
 .logotip{
     align-self: center;
 }
@@ -48,6 +80,7 @@ figure {
      background: #fafafa;
      margin: 0 auto;
      padding: 20px 0;
+    
  }
 
  .proyect{
@@ -61,6 +94,7 @@ figure {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* flex-wrap: wrap; */
  }
 
  .proyect-details{
@@ -69,6 +103,7 @@ figure {
 
  .proyect-imageContainer{
      width: 500px;
+     max-width: 100%;
  }
 
 .proyect-title{
@@ -102,27 +137,34 @@ figure {
      display: flex;
      align-items: center;
      justify-content: space-between;
+     padding: 0;
+     flex-wrap: wrap;
  }
 
  .principal-image {
      object-fit: cover;
      display: inherit;
      padding: inherit;
-     width: 500px;
+     width: 400px;
      /* border: 2px solid pink; */
      height: inherit;
      justify-content: space-between;
      align-items: center;
-     
+    
  } 
-
+.principal-image img{
+    border-radius: 5px;
+}
  .cabecera{
      background-color: #000000;
      color: white;
      margin: 0 auto;
      display: flex;
      justify-content: space-between;
+     align-items: center;
      height: 70px;
+     flex-wrap: wrap;
+
  }
 
  .cabecera a {
@@ -131,15 +173,17 @@ figure {
      height: inherit;
      display: flex;
      align-items: center;
-     padding: 0 10px;
+     padding: 10px 10px;  
+     
  }
 
  ol,
  li {
      margin: 0;
-     padding: 0;
+     padding: 10px;
      list-style: none;
      display: flex;
+     height: inherit;
     
  }
 
@@ -149,13 +193,17 @@ figure {
      height: inherit;
      
  }
+ .menu {
+     display: flex;
+ }
 
  .menu ol{ 
     margin: 0px;
     padding: 0px; 
     display: flex;
-    height: 70px;
+    height: inherit;
     align-items: center;
+    
  }
 
 .index {
@@ -170,13 +218,15 @@ figure {
      align-items: center;   
      color: white;
      justify-content: space-between;
+     /* flex-wrap: wrap; */
      padding: 20px 0;
      margin: 0 auto;
      background-size: 10px;
-     height: 80px;
+     height: 100px;
  }
 
  .pie-pagina img{
+     
      vertical-align: middle;
      border-radius: 5px;
  }
@@ -186,8 +236,13 @@ figure {
  }
  .experientia{
      display: flex;
-     margin: 0 auto;
-     
+     justify-content: space-between;
+     flex-wrap: wrap;
+     /* margin-bottom: 15px; */
+     padding: 20px;
+     align-items: center;
+     margin: 20px;
+
  }
 
  .experientia-title {
@@ -198,8 +253,8 @@ figure {
 
  .work {
      /* border: 1px solid red; */
-     margin: 10px;
-     width: 500px;
+     margin: 1px;
+     width: 48%;
      flex-shrink: 0;
      border-radius: 10px;
      overflow: hidden;
@@ -209,9 +264,13 @@ figure {
  }
 .work-imageContainer{
     display: flex;
-    width: 500px;
+    width: auto;
+    max-width: 100%;
     padding: 0px 0px;
     margin: 0;
+    position: relative;
+
+
 }
 .work img{
     width: 500px;
@@ -248,6 +307,7 @@ figure {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 20px 0px;
     margin: 0 auto;
 }
@@ -305,12 +365,271 @@ figure {
 
 .container {
     /* border: 1px solid red; */
-    width: 1100px;
+    max-width: 1100px;
+    flex: 1;
     margin: inherit;
     display: inherit;
     justify-content: inherit;
     height: inherit;
     align-items: inherit;
-    padding: inherit;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    flex-shrink: initial;
+   
 }
 
+.video-html {
+        width: auto;
+    }
+
+.video-youtube {
+        max-width: auto;
+        height: 350px;
+    }
+
+.burger-menu {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0,0, 0, .8);
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 4;
+    left: 10px;
+    top: 10px;
+    color: white;
+    font-size: 30px;
+    
+}
+
+@media screen and (max-width: 1000px){
+    .principal{
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        padding: 2em;
+    }
+
+    .principal-image{
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        width: 100%;
+        
+    }
+    h1{
+       font-size: 2em;
+       z-index: 2;
+    }
+    .video-html {
+        width: 100%;
+    }
+    .video-youtube {
+        max-width: auto;
+        height: 350px;
+    }
+
+    .burger-menu{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0,0, 0, .8);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 4;
+    left: 10px;
+    top: 10px;
+    color: white;
+    font-size: 30px;
+    }
+
+    .video-youtube {
+        max-width: 100%;
+        height: 350px;
+    }
+
+    .video-html {
+        width: 100%;
+    }
+    h1{
+        font-size: 2em;
+        z-index: 2;
+        background: rgba(0,0,0,.5); 
+    }
+
+    .principal{
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        padding: 2em;
+    }
+
+    .principal-image{
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        width: 100%;
+        
+    }
+
+    .principal img{
+        overflow: hidden;
+    }
+
+    .menu{
+        position: fixed;
+        background: rgba(5, 111, 255, .8);
+        z-index: 2;
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+    
+        }
+    .menu.active{
+        left: 0;
+        display: flex;
+    }
+
+    .cabecera a{
+        height: 40px;
+        justify-content: center;
+        font-size: 30px;
+        text-decoration: underline;
+        margin-bottom: 20px;
+        
+        
+    }
+
+    .cabecera{
+        display: block;
+        height: auto;
+    }
+    
+    .cabecera ol{
+        display: block;
+    }
+
+    .cabecera ol li{
+        height: 20px;
+    }
+
+    .cabecera .logotip{
+        text-align: center;
+    }
+
+    .portfolio h2{
+        text-align: center;
+    }
+    .proyect{
+        display: block;
+        width: auto;
+    }
+
+    .proyect-imageContainer{
+        width: auto;
+        text-align: center;
+        
+
+    }
+
+    .proyect img{
+        position: relative;
+        width: 100%;
+    }
+
+    .proyect-details{
+        width: auto;
+        text-align: center;
+    }
+
+    .work {
+        display: block;
+        width: auto;
+        
+    }
+    .work-detail{
+        margin: -2em 0.5em 0.5em;
+        padding: 1em;
+
+    }
+    .work img{
+        width: 100%;
+    }
+
+    .experientia-title{
+        text-align: center;
+    }
+
+    .experientia{
+        display: block;
+        width: auto;
+    }
+
+    .contact{
+        height: auto;
+        width: auto;
+        display: block;
+        text-align: center;
+        margin-top: 0;
+    }
+    .container{
+        width: auto;
+    }
+
+    .work-imageContainer{
+        height: auto;
+        display: block;
+        text-align: center;
+        width: auto;
+
+        margin: 0 auto;
+        padding: 1em;
+        
+    }
+
+    .form-email button{
+        margin: 1em auto;
+    }
+
+    .form-email h3{
+        margin-top: 0;
+    }
+
+    .pie-pagina {
+        display: block;
+        text-align: center;
+        /* border: 1px solid transparent; */
+        flex-wrap: wrap;
+        height: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+   
+
+
+@media screen and (max-width:767px){
+   
+
+}
+@media only screen and (max-width: 480px){
+ 
+}
+@media screen and (max-width: 320px){
+   
+}
